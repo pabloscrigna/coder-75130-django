@@ -1,5 +1,5 @@
 """
-URL configuration for proyecto1 project.
+URL configuration for proyecto project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -15,13 +15,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
-from .views import vista_inicial
-from miapp.views import index
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("vista-inicial", vista_inicial),
-    path("inicio", index)
+    path("app-coder/", include('appCoder.urls'))
 ]

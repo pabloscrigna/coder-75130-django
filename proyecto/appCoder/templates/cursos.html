@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primera pagina - Python</title>
+    <title>Listado de Cursos</title>
 </head>
 <body>
-    <p>Bienvenidos al curso de python comision 75130</p>
-    <p>Profesor: {{nombre}} </p>
+    {% for curso in cursos %}
+    <li> {{curso.nombre}} {{curso.camada}}  </li>
+    {% endfor %}
 </body>
 </html>
