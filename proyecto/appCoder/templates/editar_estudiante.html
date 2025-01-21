@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Listado de Cursos{% endblock %}
+
+{% block content %}
+    <h1>Actualizar Estudiante</h1>
+
+    <form action="{% url 'actualizar_estudiante' estudiante_id %}" method="POST">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar</button>
+{% endblock %}

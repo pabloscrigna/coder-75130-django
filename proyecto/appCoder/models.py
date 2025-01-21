@@ -19,6 +19,7 @@ class Curso(models.Model):
     def __str__(self):
         return self.nombre
 
+
 class Profesor(models.Model):
     nombre = models.CharField(max_length=20)
     apellido = models.CharField(max_length=20)
@@ -31,3 +32,24 @@ class Profesor(models.Model):
 
     def __str__(self):
         return self.nombre
+
+# CRUD
+
+# C Create crear un objeto en la DB
+# R Leer un objeto de la DB
+# U Update actualizar un objeto de la DB
+# D Delete Eliminar un objeto de la DB
+
+# Listar los objetos de la DB  -- Paginacion
+
+
+class Estudiante(models.Model):
+    nombre = models.CharField(max_length=20)
+    apellido = models.CharField(max_length=20)
+    email = models.EmailField()
+
+    def __str__(self):
+        return f"{self.nombre}, {self.apellido}"
+
+
+
